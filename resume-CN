@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李宗伟 - 学术</title>
+    <style>
+        body {
+            font-family: 'Microsoft Yahei', sans-serif; /* 指定微软雅灰字体 */
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            color: #000;
+            background-color: #f4f4f4; /* 设置背景颜色为浅灰色 */
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        h1, h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li::before {
+            content: "• ";
+            font-size: 1.5em; /* 调整点的大小 */
+            color: #000;
+        }
+        ul.large-dots li::marker {
+            font-size: 1.5em; /* 调整点的大小 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>李宗伟</h1>
+        <div style="display: flex; align-items: flex-start;">
+            <ul>
+                <li>网络空间安全硕士研究生</li>
+                <li>海南大学网络空间安全学院，海口</li>
+                <li>ACM SIG会员</li>
+                <li>WWW大会文献标记倡议程序委员会成员</li>
+                <li>邮箱: lizw1017@gmail.com</li>
+            </ul>
+            <img src="https://avatars.githubusercontent.com/u/128763841?s=400&u=97cf326ac2ba45f0f095d02b8a0277f8e592e29d&v=4" alt="李宗伟头像" style="margin-left: auto; width: 150px; height: 150px; border-radius: 50%;">
+        </div>
+
+        <h2>个人简介</h2>
+        <p>
+            我是海南大学网络空间安全专业的硕士研究生。我的研究方向主要集中在智能合约安全和区块链技术上。
+        </p>
+
+        <h2>教育背景</h2>
+        <ul>
+            <li>学士学位：物联网工程，西华大学。</li>
+            <li>硕士学位：网络空间安全，海南大学。</li>
+            <li><del>博士学位：网络空间安全，海南大学。</del>（即将开始）</li>
+        </ul>
+
+        <h2>研究兴趣</h2>
+        <ul>
+            <li>区块链，软件工程，人工智能</li>
+        </ul>
+
+        <h2>获得的奖项</h2>
+        <ul>
+            <li>国家奖学金，2023-2024</li>
+            <li>优秀研究生，2023-2024</li>
+            <li>海南大学科技节“优秀学术报告”二等奖，2024</li>
+        </ul>
+
+        <h2>参与的研究项目</h2>
+        <ul>
+            <li>CCF-腾讯犀牛鸟基金项目（CCF-Tencent RAGR20230115），2023~2024。</li>
+            <li>国家自然科学基金（国家自然科学基金 No. 62362021, No. 62402146），2024~至今。</li>
+        </ul>
+
+        <h2>代表性出版物 | 更多请见 <a href="https://scholar.google.com/citations?user=hAPXctEAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 10px;">
+                <strong>SCALM: 通过LLMs检测智能合约中的不良实践</strong>
+                [<a href="#">PDF</a>]<br>
+                &nbsp;&nbsp;<strong>李宗伟</strong>, 李文凯, 李霞琦, 张玉清<br>
+                &nbsp;&nbsp;[第39届AAAI人工智能会议，2024（AAAI'25）]
+            </li>
+
+            <li style="margin-bottom: 10px;">
+                <strong>账本的守护者：保护去中心化交易所免受状态失调缺陷</strong>
+                [<a href="https://arxiv.org/pdf/2411.18935">PDF</a>]<br>
+                &nbsp;&nbsp;<strong>李宗伟</strong>, 李文凯, 李晓琦, 张玉清<br>
+                &nbsp;&nbsp;[IEEE可靠性交易，2024（TRel'24）]
+            </li>
+            
+            <li style="margin-bottom: 10px;">
+                <strong>StateGuard：检测去中心化交易所智能合约中的状态失调缺陷</strong>
+                [<a href="https://arxiv.org/pdf/2405.09181">PDF</a>]<br>
+                &nbsp;&nbsp;<strong>李宗伟</strong>, 李文凯, 李霞琦, 张玉清<br>
+                &nbsp;&nbsp;[第33届ACM国际万维网会议，2024（WWW'24）]
+            </li>
+
+            <li style="margin-bottom: 10px;">
+                <strong>基于人工智能和区块链融合的隐私保护技术研究综述</strong>
+                [<a href="http://www.sicris.cn/CN/abstract/abstract1408.shtml">PDF</a>]<br>
+                &nbsp;&nbsp;<strong>李宗伟</strong>, 孔德超, 牛元正, 彭洪利, 李晓琦, 李文凯<br>
+                &nbsp;&nbsp;[信息安全研究, 2023（CCF-T3，2023-2024年度优秀论文奖）]
+            </li>
+
+            <li style="margin-bottom: 10px;">
+                <strong>COBRA：面向智能合约的交互感知字节码级漏洞检测器</strong>
+                [<a href="https://arxiv.org/pdf/2410.20712">PDF</a>]<br>
+                &nbsp;&nbsp;李文凯, 李霞琦, <strong>李宗伟</strong>, 张玉清<br>
+                &nbsp;&nbsp;[第39届IEEE/ACM自动化软件工程国际会议（ASE'24）]
+            </li>
+
+            <li style="margin-bottom: 10px;">
+                <strong>通过跨合约执行分析进行DeFi协议检查</strong>
+                [<a href="https://arxiv.org/pdf/2405.11035">PDF</a>]<br>
+                &nbsp;&nbsp;李文凯, 李霞琦, 张玉清, <strong>李宗伟</strong><br>
+                &nbsp;&nbsp;[第33届ACM国际万维网会议，2024（WWW'24）]
+            </li>
+        </ul>
+
+        <h2>其他</h2>
+        <ul>
+            <li>公共漏洞和暴露（CVE）：CVE-2023-47033, CVE-2023-47034, CVE-2023-47035</li>
+            <li>AI网站：<a href="https://www.rikka.asia" target="_blank">rikka.asia</a></li>
+        </ul>
+    </div>
+</body>
+</html>
