@@ -41,6 +41,22 @@
         ul.large-dots li::marker {
             font-size: 1.5em; /* 调整点的大小 */
         }
+        p {
+            text-align: justify;
+            text-justify: inter-ideograph; /* 对中文更好支持 */
+            word-spacing: -0.05em;
+            line-height: 1.6;
+            max-width: 800px; /* 控制段落最大宽度 */
+            margin: 0 auto;    /* 居中显示 */
+        }
+        
+        /* 支持现代浏览器 */
+        @supports (text-wrap: pretty) {
+            p {
+                text-wrap: pretty;
+                hanging-punctuation: allow-end;
+            }
+        }
     </style>
 </head>
 <body>
