@@ -16,8 +16,47 @@
             justify-content: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
+        }
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 28px;
+        }
+        .profile-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .profile-meta {
+            margin-top: 8px;
+        }
+        .lang-switch {
+            display: inline;
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            border-bottom: 1px solid #bbb;
+            padding-bottom: 1px;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        .lang-switch:hover,
+        .lang-switch:focus-visible {
+            color: #000;
+            border-bottom-color: #000;
+            outline: none;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
         h1, h2 {
             border-bottom: 1px solid #ddd;
@@ -35,33 +74,44 @@
         ul.large-dots li::marker {
             font-size: 1.5em; /* 调整点的大小 */
         }
+        @media (max-width: 640px) {
+            .profile-header {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>李宗维</h1>
-        <div style="display: flex; align-items: flex-start;">
-            <ul>
-                <li>网络空间安全硕士研究生</li>
-                <li>海南大学，网络空间安全学院</li>
-                <li>ACM SIG会员</li>
-                <li>WWW会议工件徽章计划委员会</li>
-                <li>邮箱: lizw1017@gmail.com</li>
-                <a href="index.html">英文版</a>
-            </ul>
-            <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=hAPXctEAAAAJ&citpid=8" alt="李宗维头像" style="margin-left: auto; width: 150px; height: 150px; border-radius: 50%;">
+        <div class="profile-header">
+            <div class="profile-info">
+                <h1>Zongwei Li（李宗维）</h1>
+                <ul class="profile-meta">
+                    <li>网络空间安全博士研究生</li>
+                    <li>邮箱: lizw1017@gmail.com</li>
+                    <li><a class="lang-switch" href="index.html">English Version</a></li>
+                </ul>
+            </div>
+            <img class="avatar" src="./pic.jpg" alt="李宗维头像">
         </div>
 
         <h2>个人简介</h2>
         <p>
-            海南大学网络空间安全专业的硕士研究生。研究方向主要集中在智能合约安全和区块链技术上。
+            李宗维，海南大学网络空间安全博士研究生，导师为<a href="https://csxqli.github.io/" target="_blank">李晓琦教授</a>。研究方向包括区块链安全、智能合约漏洞检测以及人工智能在软件安全中的应用。在 WWW、AAAI 等顶级会议发表论文，其研究成果获国家奖学金等多项奖励。
         </p>
 
         <h2>教育背景</h2>
         <ul>
-            <li>学士学位：物联网工程，西华大学。</li>
-            <li>硕士学位：网络空间安全，海南大学。</li>
-            <li><del>博士学位：网络空间安全，海南大学。</del>（即将开始）</li>
+            <li>学士：物联网工程，西华大学。</li>
+            <li>硕士：网络空间安全，海南大学。</li>
+            <li>博士：网络空间安全，海南大学。（在读）</li>
+
         </ul>
 
         <h2>研究兴趣</h2>
@@ -76,6 +126,11 @@
             <li>年度优秀论文，信息安全研究，2024</li>
             <li>优秀学术报告，海南大学，2024</li>
             <li>BlackHat Asia 奖学金，2025</li>
+            <li>优秀毕业生，海南大学，2025</li>
+            <li>年度人物奖，海南大学，2025</li>
+            <li>第11届中国国际发明展览会银奖，2025</li>
+            <li>海南省人工智能教育教学成果奖二等奖，海南省人工智能学会，2026</li>
+            <li>全国高校算法课程及程序设计一等奖，全国高等学校计算机教育研究会，2026</li>
         </ul>
 
         <h2>参与的研究项目</h2>
@@ -87,57 +142,71 @@
         <h2>代表性论文 | 更多请见 <a href="https://scholar.google.com/citations?user=hAPXctEAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></h2>
         <ul style="list-style-type: none; padding: 0;">
             <li style="margin-bottom: 10px;">
+                <strong>No More Hidden Pitfalls? Exposing Smart Contract Bad Practices with LLM-Powered Hybrid Analysis</strong>
+                [<a href="https://doi.org/10.1145/3795692">PDF</a>]<br>
+                &nbsp;&nbsp;Xiaoqi Li, <strong><u>Zongwei Li</u></strong><strong>*</strong>, Wenkai Li, Yuqing Zhang, Xin Wang<br>
+                &nbsp;&nbsp;[ACM Transactions on Software Engineering and Methodology, (TOSEM'26)]
+            </li>
+
+            <li style="margin-bottom: 10px;">
+                <strong>AtomGraph: Tackling Atomicity Violation in Smart Contracts using Multimodal GCNs</strong>
+                [<a href="https://doi.org/10.1145/3786582.3786816">PDF</a>]<br>
+                &nbsp;&nbsp;Xiaoqi Li, <strong><u>Zongwei Li</u></strong><strong>*</strong>, Wenkai Li, Zeng Zhang, Lei Xie<br>
+                &nbsp;&nbsp;[2026 IEEE/ACM 48th International Conference on Software Engineering, (ICSE'26)]
+            </li>
+
+            <li style="margin-bottom: 10px;">
                 <strong>SCALM: Detecting Bad Practices in Smart Contracts through LLMs</strong>
-                [<a href="#">PDF</a>]<br>
-               &nbsp;&nbsp;<strong>Zongwei Li</strong>, Xiaoqi Li, Wenkai Li, Xin Wang<br>
-                &nbsp;&nbsp;[The 39th AAAI Conference on Artificial Intelligence, 2025 (AAAI'25)]
+                [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/32026">PDF</a>]<br>
+                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Xiaoqi Li*, Wenkai Li, Xin Wang<br>
+                &nbsp;&nbsp;[The 39th AAAI Conference on Artificial Intelligence, (AAAI'25)]
             </li>
 
             <li style="margin-bottom: 10px;">
                 <strong>Guardians of the Ledger: Protecting Decentralized Exchanges from State Derailment Defects</strong>
-                [<a href="https://arxiv.org/pdf/2411.18935">PDF</a>]<br>
-                &nbsp;&nbsp;<strong>Zongwei Li</strong>, Wenkai Li, Xiaoqi Li, Yuqing Zhang<br>
-                &nbsp;&nbsp;[IEEE Transactions on Reliability, 2024 (TRel'24)]
+                [<a href="https://ieeexplore.ieee.org/document/10806737">PDF</a>]<br>
+                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Wenkai Li, Xiaoqi Li*, Yuqing Zhang<br>
+                &nbsp;&nbsp;[IEEE Transactions on Reliability, (TRel'24)]
             </li>
-            
-            
+
             <li style="margin-bottom: 10px;">
                 <strong>StateGuard: Detecting State Derailment Defects in Decentralized Exchange Smart Contract</strong>
-                [<a href="https://arxiv.org/pdf/2405.09181">PDF</a>]<br>
-                &nbsp;&nbsp;<strong>Zongwei Li</strong>, Wenkai Li, Xiaoqi Li, Yuqing Zhang<br>
-                &nbsp;&nbsp;[The 33rd ACM International World Wide Web Conference, 2024 (WWW'24)]
+                [<a href="https://dl.acm.org/doi/10.1145/3589335.3651562">PDF</a>]<br>
+                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Wenkai Li, Xiaoqi Li*, Yuqing Zhang<br>
+                &nbsp;&nbsp;[The 33rd ACM International World Wide Web Conference, (WWW'24)]
             </li>
 
-            
-            
-
             <li style="margin-bottom: 10px;">
-                <strong>基于人工智能和区块链融合的隐私保护技术研究综述</strong>
+                <strong>Towards a Privacy-preserving Research for AI and Blockchain Integration</strong>
                 [<a href="http://www.sicris.cn/CN/abstract/abstract1408.shtml">PDF</a>]<br>
-                &nbsp;&nbsp;<strong>Zongwei Li</strong>, Dechao Kong, Yuanzheng Niu, Hongli Peng, Xiaoqi Li, Wenkai Li<br>
-                &nbsp;&nbsp;[信息安全研究, 2023 (CCF-T3，2023-2024年度优秀论文奖)]
+                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Dechao Kong, Yuanzheng Niu, Hongli Peng, Xiaoqi Li*, Wenkai Li<br>
+                &nbsp;&nbsp;[Journal of Information Security Research, 2023 (CCF-T3，Excellent Paper Award 2023-2024)]
             </li>
 
             <li style="margin-bottom: 10px;">
                 <strong>COBRA: Interaction-Aware Bytecode-Level Vulnerability Detector for Smart Contracts</strong>
                 [<a href="https://arxiv.org/pdf/2410.20712">PDF</a>]<br>
-                &nbsp;&nbsp;Wenkai Li, Xiaoqi Li, <strong>Zongwei Li</strong>, Yuqing Zhang<br>
+                &nbsp;&nbsp;Wenkai Li, Xiaoqi Li*, <strong><u>Zongwei Li</u></strong>, Yuqing Zhang<br>
                 &nbsp;&nbsp;[The 39th IEEE/ACM International Conference on Automated Software Engineering (ASE'24)]
             </li>
 
             <li style="margin-bottom: 10px;">
                 <strong>DeFi Protocol Inspection through Cross-Contract Execution Analysis</strong>
                 [<a href="https://arxiv.org/pdf/2405.11035">PDF</a>]<br>
-                &nbsp;&nbsp;Wenkai Li, Xiaoqi Li, Yuqing Zhang, <strong>Zongwei Li</strong><br>
-                &nbsp;&nbsp;[The 33rd ACM International World Wide Web Conference, 2024 (WWW'24)]
+                &nbsp;&nbsp;Wenkai Li, Xiaoqi Li*, Yuqing Zhang, <strong><u>Zongwei Li</u></strong><br>
+                &nbsp;&nbsp;[The 33rd ACM International World Wide Web Conference, (WWW'24)]
             </li>
         </ul>
 
 
         <h2>其他</h2>
         <ul>
-            <li>公共漏洞和暴露（CVE）：CVE-2023-47033, CVE-2023-47034, CVE-2023-47035</li>
-            <li>AI网站：<a href="https://www.rikka.asia" target="_blank">rikka.asia</a></li>
+            <li>公共漏洞和暴露（<strong>CVE</strong>）：CVE-2023-47033, CVE-2023-47034, CVE-2023-47035, CVE-2025-57247</li>
+            <li><strong>中国发明专利</strong>：一种使用检索增强生成和 Step-Back Prompting 的智能合约代码审计方法及系统（ZL 202411458762.6），2025。</li>
+            <li><strong>中国软件著作权</strong>：基于检索增强生成与多模型协作的智能合约安全审计软件（2025SR0397291），2025。</li>
+            <li><strong>中国软件著作权</strong>：状态缺陷感知的智能合约检测软件（2024SR0268508），2024。</li>
+            <li><strong>中国软件著作权</strong>：去中心化金融协议恶意行为检测软件（2024SR0384256），2024。</li>
+            <li><strong>中国软件著作权</strong>：交互感知的智能合约漏洞检测软件（2023SR1384723），2023。</li>
         </ul>
     </div>
 </body>

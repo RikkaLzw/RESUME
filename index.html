@@ -25,6 +25,45 @@
             max-width: 900px;
             width: 100%;
         }
+        .profile-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 32px;
+            margin-bottom: 28px;
+        }
+        .profile-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .profile-meta {
+            margin-top: 8px;
+        }
+        .lang-switch {
+            display: inline;
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            border-bottom: 1px solid #bbb;
+            padding-bottom: 1px;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        .lang-switch:hover,
+        .lang-switch:focus-visible {
+            color: #000;
+            border-bottom-color: #000;
+            outline: none;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
         h1, h2 {
             border-bottom: 1px solid #ddd;
             padding-bottom: 10px;
@@ -57,28 +96,42 @@
                 hanging-punctuation: allow-end;
             }
         }
+        @media (max-width: 640px) {
+            .profile-header {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
 
+            <div class="profile-header">
+            <div class="profile-info">
             <h1>Zongwei Li（李宗维）</h1>
-            <div style="display: flex; align-items: flex-start;">
-            <ul>
+            <ul class="profile-meta">
                 <li>Ph.D. Candidate in Cyberspace Security</li>
                 <!-- <li>School of Cyberspace Security, Hainan University, Haikou</li> -->
                 <!-- <li>ACM SIG & AAAI Member</li> -->
 <!--                 <li>Program Committee for the WWW Conference Artifact Badging Initiative</li> -->
                 <li>Email: lizw1017@gmail.com</li>
-<!--                 <a href="index_CN.html">中文版</a> -->
+                <li><a class="lang-switch" href="index_CN.html">中文版</a></li>
             </ul>
-            <img src="./pic.jpg" alt="Zongwei Li Avatar" style="margin-left: auto; width: 150px; height: 150px; border-radius: 50%;">
+            </div>
+            <img class="avatar" src="./pic.jpg" alt="Zongwei Li Avatar">
 
     </div>
 
         <h2>Biography</h2>
         <p>
             Zongwei Li is a Ph.D. Candidate in Cyberspace Security at Hainan University, supervised by <a href="https://csxqli.github.io/" target="_blank">Prof. Xiaoqi Li（李晓琦）</a>. His research interests lie in blockchain security, smart contract vulnerability detection, and the application of AI in software security. He has published papers at top-tier conferences such as WWW and AAAI. His work has been recognized with the National Scholarship and multiple awards.
+        </p>
 
         <h2>Education</h2>
         <ul>
@@ -100,6 +153,12 @@
             <li>Outstanding Paper Award, Journal of Information Security Research, 2023-2024</li>
             <li>Outstanding Academic Report Award, Hainan University, 2024</li>
             <li>BlackHat Asia Scholarship, 2025</li>
+            <li>Outstanding Graduate, Hainan University, 2025</li>
+            <li>Person of the Year Award, Hainan University, 2025</li>
+            <li>Silver Medal, The 11th China International Invention Exhibition, 2025</li>
+            <li>Second Prize, Hainan Province AI Education and Teaching Achievement Award, Hainan Association for Artificial Intelligence, 2026</li>
+            <li>First Prize, National University Algorithm Courses and Programming Design Competition, Computer Education Research Association of Chinese Universities, 2026</li>
+
 
         </ul>
 
@@ -112,25 +171,40 @@
         <h2>Selected Publications | More in <a href="https://scholar.google.com/citations?user=hAPXctEAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></h2>
         <ul style="list-style-type: none; padding: 0;">
             <li style="margin-bottom: 10px;">
+                <strong>No More Hidden Pitfalls? Exposing Smart Contract Bad Practices with LLM-Powered Hybrid Analysis</strong>
+                [<a href="https://doi.org/10.1145/3795692">PDF</a>]<br>
+                &nbsp;&nbsp;Xiaoqi Li, <strong><u>Zongwei Li</u></strong><strong>*</strong>, Wenkai Li, Yuqing Zhang, Xin Wang<br>
+                &nbsp;&nbsp;[ACM Transactions on Software Engineering and Methodology, (TOSEM'26)]
+            </li>
+
+            <li style="margin-bottom: 10px;">
+                <strong>AtomGraph: Tackling Atomicity Violation in Smart Contracts using Multimodal GCNs</strong>
+                [<a href="https://doi.org/10.1145/3786582.3786816">PDF</a>]<br>
+                &nbsp;&nbsp;Xiaoqi Li, <strong><u>Zongwei Li</u></strong><strong>*</strong>, Wenkai Li, Zeng Zhang, Lei Xie<br>
+                &nbsp;&nbsp;[2026 IEEE/ACM 48th International Conference on Software Engineering, (ICSE'26)]
+            </li>
+
+
+            <li style="margin-bottom: 10px;">
                 <strong>SCALM: Detecting Bad Practices in Smart Contracts through LLMs</strong>
                 [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/32026">PDF</a>]<br>
-                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Xiaoqi Li, Wenkai Li, Xin Wang<br>
-                &nbsp;&nbsp;[The 39th AAAI Conference on Artificial Intelligence, 2025 (AAAI'25)]
+                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Xiaoqi Li*, Wenkai Li, Xin Wang<br>
+                &nbsp;&nbsp;[The 39th AAAI Conference on Artificial Intelligence, (AAAI'25)]
             </li>
 
             <li style="margin-bottom: 10px;">
                 <strong>Guardians of the Ledger: Protecting Decentralized Exchanges from State Derailment Defects</strong>
                 [<a href="https://ieeexplore.ieee.org/document/10806737">PDF</a>]<br>
-                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Wenkai Li, Xiaoqi Li, Yuqing Zhang<br>
-                &nbsp;&nbsp;[IEEE Transactions on Reliability, 2024 (TRel'24)]
+                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Wenkai Li, Xiaoqi Li*, Yuqing Zhang<br>
+                &nbsp;&nbsp;[IEEE Transactions on Reliability, (TRel'24)]
             </li>
             
             
             <li style="margin-bottom: 10px;">
                 <strong>StateGuard: Detecting State Derailment Defects in Decentralized Exchange Smart Contract</strong>
                 [<a href="https://dl.acm.org/doi/10.1145/3589335.3651562">PDF</a>]<br>
-                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Wenkai Li, Xiaoqi Li, Yuqing Zhang<br>
-                &nbsp;&nbsp;[The 33rd ACM International World Wide Web Conference, 2024 (WWW'24)]
+                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Wenkai Li, Xiaoqi Li*, Yuqing Zhang<br>
+                &nbsp;&nbsp;[The 33rd ACM International World Wide Web Conference, (WWW'24)]
             </li>
 
             
@@ -139,22 +213,22 @@
             <li style="margin-bottom: 10px;">
                 <strong>Towards a Privacy-preserving Research for AI and Blockchain Integration</strong>
                 [<a href="http://www.sicris.cn/CN/abstract/abstract1408.shtml">PDF</a>]<br>
-                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Dechao Kong, Yuanzheng Niu, Hongli Peng, Xiaoqi Li, Wenkai Li<br>
+                &nbsp;&nbsp;<strong><u>Zongwei Li</u></strong>, Dechao Kong, Yuanzheng Niu, Hongli Peng, Xiaoqi Li*, Wenkai Li<br>
                 &nbsp;&nbsp;[Journal of Information Security Research, 2023 (CCF-T3，Excellent Paper Award 2023-2024)]
             </li>
 
             <li style="margin-bottom: 10px;">
                 <strong>COBRA: Interaction-Aware Bytecode-Level Vulnerability Detector for Smart Contracts</strong>
                 [<a href="https://arxiv.org/pdf/2410.20712">PDF</a>]<br>
-                &nbsp;&nbsp;Wenkai Li, Xiaoqi Li, <strong><u>Zongwei Li</u></strong>, Yuqing Zhang<br>
+                &nbsp;&nbsp;Wenkai Li, Xiaoqi Li*, <strong><u>Zongwei Li</u></strong>, Yuqing Zhang<br>
                 &nbsp;&nbsp;[The 39th IEEE/ACM International Conference on Automated Software Engineering (ASE'24)]
             </li>
 
             <li style="margin-bottom: 10px;">
                 <strong>DeFi Protocol Inspection through Cross-Contract Execution Analysis</strong>
                 [<a href="https://arxiv.org/pdf/2405.11035">PDF</a>]<br>
-                &nbsp;&nbsp;Wenkai Li, Xiaoqi Li, Yuqing Zhang, <strong><u>Zongwei Li</u></strong><br>
-                &nbsp;&nbsp;[The 33rd ACM International World Wide Web Conference, 2024 (WWW'24)]
+                &nbsp;&nbsp;Wenkai Li, Xiaoqi Li*, Yuqing Zhang, <strong><u>Zongwei Li</u></strong><br>
+                &nbsp;&nbsp;[The 33rd ACM International World Wide Web Conference, (WWW'24)]
             </li>
         </ul>
 
@@ -167,7 +241,6 @@
             <li><strong>China Software Copyright</strong>, State Defect-Aware Smart Contract Detection Software (2024SR0268508), 2024.</li>
             <li><strong>China Software Copyright</strong>, Malicious Behavior Detection Software for Decentralized Financial Protocols (2024SR0384256), 2024.</li>
             <li><strong>China Software Copyright</strong>, Interactive Perception Smart Contract Vulnerability Detection Software (2023SR1384723), 2023.</li>
-            <li>Personal Website: <a href="https://www.zongwei.cc" target="_blank">zongwei.cc</a></li>
         </ul>
     </div>
 </body>
